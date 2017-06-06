@@ -4,6 +4,55 @@
 	{
 		static void Main(string[] args)
 		{
+			int intA = 10;
+			int intB = 20;
+			int intC = 30;
+
+			// **********
+			string strResult1 = "A = " + intA + ", B = " + intB + ", C = " + intC;
+			// strResult1: A = 10, B = 20, C = 30
+
+			System.Console.WriteLine(strResult1);
+			// **********
+
+			// **********
+			string strResult2 = string.Format("A = {0}, B = {1}, C = {2}", intA, intB, intC);
+			// strResult2: A = 10, B = 20, C = 30
+
+			System.Console.WriteLine(strResult2);
+			// **********
+
+			string strFirstName = "Dariush";
+			string strLastName = "Tasdighi";
+
+			// **********
+			string strFullName1 = strFirstName + " " + strLastName;
+			// strFullName1: Dariush Tasdighi
+
+			System.Console.WriteLine(strFullName1);
+			// **********
+
+			// **********
+			string strFullName2 = string.Format("{0} {1}", strFirstName, strLastName);
+			// strFullName2: Dariush Tasdighi
+
+			System.Console.WriteLine(strFullName2);
+			// **********
+
+			// **********
+			string strResult3 = string.Format("A = {1}, B = {0}, C = {1}", intA, intB, intC);
+			// strResult3: A = 20, B = 10, C = 20
+
+			System.Console.WriteLine(strResult3);
+			// **********
+
+			// **********
+			//string strResult4 = string.Format("A = {1}, B = {0}, C = {1}", intA);
+			//// strResult4: ERROR!
+
+			//System.Console.WriteLine(strResult4);
+			// **********
+
 			// شده‌ای اشاره کنند new شوند و یا باید به یک شیء یا مجموعه از قبل new قبل از آنکه بتوان با آنها کار کرد، یا باید Reference Type تمام متغیرهای
 			// string به استثناء
 			// هستند Reference Type تمام آرایه‌ها در سی‌شارپ
@@ -49,10 +98,11 @@
 
 			//int[] intNumbers = new int[intNumberCount];
 
-			//int intIndex = 1;
-
-			//while (intIndex <= intNumberCount)
+			//for (int intIndex = 1; intIndex <= intNumberCount; intIndex++)
 			//{
+			//	//string strMessage =
+			//	//	"[" + intIndex + "] -> ";
+
 			//	string strMessage =
 			//		string.Format("[{0}]: ", intIndex);
 
@@ -65,49 +115,50 @@
 			//		System.Convert.ToInt32(strNumber);
 
 			//	intNumbers[intIndex - 1] = intNumber;
-
-			//	intIndex++;
 			//}
 
 			//int intSum = 0;
 
-			//for (int intCurrentIndex = 0; intCurrentIndex <= intNumberCount - 1; intCurrentIndex++)
+			//for (int intIndex = 0; intIndex <= intNumberCount - 1; intIndex++)
 			//{
 			//	intSum +=
-			//		intNumbers[intCurrentIndex];
+			//		intNumbers[intIndex];
 			//}
+
+			////string strResult =
+			////	"The sum of these numbers is: " + intSum;
 
 			//string strResult =
 			//	string.Format("The sum of these numbers is: {0}", intSum);
 
 			//System.Console.WriteLine(strResult);
 
-			//for (intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex++)
-			//{
-			//	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
+			////for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex++)
+			////{
+			////	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
 
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			//}
+			////	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			////}
 
-			//for (intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
-			//{
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			//}
+			////for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
+			////{
+			////	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			////}
 
-			//for (intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
-			//{
-			//	intNumbers[intIndex]++;
+			////for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
+			////{
+			////	intNumbers[intIndex]++;
 
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			//}
+			////	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			////}
 
-			//foreach (int intCurrentNumber in intNumbers)
-			//{
-			//	// Note: intCurrentNumber is readonly!
-			//	//intCurrentNumber++;
+			////foreach (int intCurrentNumber in intNumbers)
+			////{
+			////	// Note: intCurrentNumber is readonly!
+			////	//intCurrentNumber++;
 
-			//	System.Console.WriteLine(">" + intCurrentNumber);
-			//}
+			////	System.Console.WriteLine(">" + intCurrentNumber);
+			////}
 			// **********
 
 			// **********
@@ -122,7 +173,7 @@
 			// **********
 
 			// **********
-			//System.Collections.ArrayList oList = new System.Collections.ArrayList();
+			System.Collections.ArrayList oList = new System.Collections.ArrayList();
 
 			//oList.Add(1);
 			//oList.Add(2);
@@ -179,6 +230,24 @@
 			//	oList.Remove(222);
 			//}
 
+			// سیستم را نابود می‌کند
+			//foreach(int intNumber in oList)
+			//{
+			//	if(intNumber == 222)
+			//	{
+			//		oList.Remove(intNumber);
+			//	}
+			//}
+
+			// سیستم را نابود می‌کند
+			//for (int intIndex = 0; intIndex < oList.Count; intIndex++)
+			//{
+			//	if ((int)oList[intIndex] == 222)
+			//	{
+			//		oList.Remove(222);
+			//	}
+			//}
+
 			//foreach (int intCurrent in oList)
 			//{
 			//	System.Console.WriteLine("> " + intCurrent);
@@ -202,8 +271,8 @@
 			//	System.Console.WriteLine("> " + intCurrent);
 			//}
 
-			//int intIndex = oList.IndexOf(222);
 			//int intIndex = oList.IndexOf(500);
+			//int intIndex = oList.IndexOf(222);
 
 			//System.Console.WriteLine("> " + intIndex);
 
