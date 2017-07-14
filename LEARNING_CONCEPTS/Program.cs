@@ -88,6 +88,8 @@
 			// **********
 
 			// **********
+			// **********
+			// **********
 			//System.Console.Write("How many numbers do you have: ");
 
 			//string strNumberCount =
@@ -132,33 +134,44 @@
 			//	string.Format("The sum of these numbers is: {0}", intSum);
 
 			//System.Console.WriteLine(strResult);
+			// **********
 
-			////for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex++)
-			////{
-			////	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
+			// **********
+			//for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex++)
+			//{
+			//	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
 
-			////	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			////}
+			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			//}
 
-			////for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
-			////{
-			////	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			////}
+			//for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex += 2)
+			//{
+			//	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
 
-			////for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
-			////{
-			////	intNumbers[intIndex]++;
+			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			//}
 
-			////	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			////}
+			//for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
+			//{
+			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			//}
 
-			////foreach (int intCurrentNumber in intNumbers)
-			////{
-			////	// Note: intCurrentNumber is readonly!
-			////	//intCurrentNumber++;
+			//for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
+			//{
+			//	intNumbers[intIndex]++;
 
-			////	System.Console.WriteLine(">" + intCurrentNumber);
-			////}
+			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			//}
+
+			//foreach (int intCurrentNumber in intNumbers)
+			//{
+			//	// Note: intCurrentNumber is readonly!
+			//	//intCurrentNumber++;
+
+			//	System.Console.WriteLine(">" + intCurrentNumber);
+			//}
+			// **********
+			// **********
 			// **********
 
 			// **********
@@ -189,7 +202,8 @@
 			//oList.Add(9);
 
 			//oList.Add(0);
-			//oList.Insert(0, 0);
+			//oList.Insert(0, 123);
+			//oList.Insert(2, 234);
 
 			//for (int intIndex = 0; intIndex <= oList.Count - 1; intIndex++)
 			//{
@@ -301,18 +315,18 @@
 			// **********
 
 			// **********
-			//System.Collections.Generic.List<int> oMyList2 = new System.Collections.Generic.List<int>();
+			System.Collections.Generic.List<int> oMyList2 = new System.Collections.Generic.List<int>();
 
-			//oMyList2.Add(1);
-			//oMyList2.Add(2);
-			////oMyList2.Add("Hello, World!"); // سوتی دادم
-			//oMyList2.Add(3);
-			//oMyList2.Add(4);
+			oMyList2.Add(1);
+			oMyList2.Add(2);
+			//oMyList2.Add("Hello, World!"); // سوتی دادم
+			oMyList2.Add(3);
+			oMyList2.Add(4);
 
-			//foreach (int intCurrent in oMyList2)
-			//{
-			//	System.Console.WriteLine("> " + intCurrent);
-			//}
+			foreach (int intCurrent in oMyList2)
+			{
+				System.Console.WriteLine("> " + intCurrent);
+			}
 			// **********
 
 			System.Console.Write("Press [ENTER] To Exit...");
