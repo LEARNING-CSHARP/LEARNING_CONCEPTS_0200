@@ -4,59 +4,10 @@
 	{
 		static void Main(string[] args)
 		{
-			int intA = 10;
-			int intB = 20;
-			int intC = 30;
-
-			// **********
-			string strResult1 = "A = " + intA + ", B = " + intB + ", C = " + intC;
-			// strResult1: A = 10, B = 20, C = 30
-
-			System.Console.WriteLine(strResult1);
-			// **********
-
-			// **********
-			string strResult2 = string.Format("A = {0}, B = {1}, C = {2}", intA, intB, intC);
-			// strResult2: A = 10, B = 20, C = 30
-
-			System.Console.WriteLine(strResult2);
-			// **********
-
-			string strFirstName = "Dariush";
-			string strLastName = "Tasdighi";
-
-			// **********
-			string strFullName1 = strFirstName + " " + strLastName;
-			// strFullName1: Dariush Tasdighi
-
-			System.Console.WriteLine(strFullName1);
-			// **********
-
-			// **********
-			string strFullName2 = string.Format("{0} {1}", strFirstName, strLastName);
-			// strFullName2: Dariush Tasdighi
-
-			System.Console.WriteLine(strFullName2);
-			// **********
-
-			// **********
-			string strResult3 = string.Format("A = {1}, B = {0}, C = {1}", intA, intB, intC);
-			// strResult3: A = 20, B = 10, C = 20
-
-			System.Console.WriteLine(strResult3);
-			// **********
-
-			// **********
-			//string strResult4 = string.Format("A = {1}, B = {0}, C = {1}", intA);
-			//// strResult4: ERROR!
-
-			//System.Console.WriteLine(strResult4);
-			// **********
-
 			// شده‌ای اشاره کنند new شوند و یا باید به یک شیء یا مجموعه از قبل new قبل از آنکه بتوان با آنها کار کرد، یا باید Reference Type تمام متغیرهای
 			// string به استثناء
 			// هستند Reference Type تمام آرایه‌ها در سی‌شارپ
-			// هستند Zero Based ها در سی‌شارپ، Collection تمامی آرایه‌ها یا
+			// هستند Zero Based ها در سی‌شارپ Collection تمامی آرایه‌ها یا
 			// آرایه پس از ساخته شدن قابلیت تغییر سایز را ندارد
 			// می‌شوند، اتفاقا مقدار اولیه مشخص دارند Allocate قرار گرفته و یا اصطلاحا Heap تمام متغیرهایی که در داخل
 			// هر چند نمی‌توان پس از خلق آرایه طول آنرا تغییر داد ولی می‌توان در زمان خلق آرایه طول آنرا به صورت پارامتر اعلام نمود
@@ -106,7 +57,7 @@
 			//	//	"[" + intIndex + "] -> ";
 
 			//	string strMessage =
-			//		string.Format("[{0}]: ", intIndex);
+			//		string.Format("[{0}] -> ", intIndex);
 
 			//	System.Console.Write(strMessage);
 
@@ -130,13 +81,15 @@
 			////string strResult =
 			////	"The sum of these numbers is: " + intSum;
 
-			//string strResult =
-			//	string.Format("The sum of these numbers is: {0}", intSum);
+			////string strResult =
+			////	string.Format("The sum of these numbers is: {0}", intSum);
 
-			//System.Console.WriteLine(strResult);
-			// **********
+			////System.Console.WriteLine(strResult);
 
-			// **********
+			//System.Console.WriteLine("The sum of these numbers is: {0}", intSum);
+			//// **********
+
+			//// **********
 			//for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex++)
 			//{
 			//	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
@@ -146,8 +99,6 @@
 
 			//for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex += 2)
 			//{
-			//	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
-
 			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
 			//}
 
@@ -158,7 +109,7 @@
 
 			//for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
 			//{
-			//	intNumbers[intIndex]++;
+			//	intNumbers[intIndex] += 5;
 
 			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
 			//}
@@ -166,7 +117,7 @@
 			//foreach (int intCurrentNumber in intNumbers)
 			//{
 			//	// Note: intCurrentNumber is readonly!
-			//	//intCurrentNumber++;
+			//	//intCurrentNumber += 5;
 
 			//	System.Console.WriteLine(">" + intCurrentNumber);
 			//}
@@ -175,14 +126,15 @@
 			// **********
 
 			// **********
-			//int[,] X = new int[3, 50];
-			//int[, ,] Y = new int[3, 50, 4];
+			int[] X = new int[3];
+			int[,] Y = new int[3, 50];
+			int[,,] Z = new int[3, 50, 4];
 
-			//// Jagged Array
-			//int[][] Z = new int[3][];
-			//Z[0] = new int[50];
-			//Z[1] = new int[2];
-			//Z[2] = new int[3];
+			// Jagged Array
+			int[][] T = new int[3][];
+			T[0] = new int[50];
+			T[1] = new int[2];
+			T[2] = new int[3];
 			// **********
 
 			// **********
