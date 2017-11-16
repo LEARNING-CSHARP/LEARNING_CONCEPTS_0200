@@ -10,131 +10,129 @@
 			// هستند Zero Based ها در سی‌شارپ Collection تمامی آرایه‌ها یا
 			// آرایه پس از ساخته شدن قابلیت تغییر سایز را ندارد
 			// می‌شوند، اتفاقا مقدار اولیه مشخص دارند Allocate قرار گرفته و یا اصطلاحا Heap تمام متغیرهایی که در داخل
-			// هر چند نمی‌توان پس از خلق آرایه طول آنرا تغییر داد ولی می‌توان در زمان خلق آرایه طول آنرا به صورت پارامتر اعلام نمود
+			// هر چند نمی‌توان پس از خلق آرایه طول آنرا تغییر داد ولی می‌توان در زمان خلق آرایه، طول آنرا به صورت پارامتریک مشخص نمود
 
 			// **********
-			//int[] X;
+			//int[] myArray;
 
-			//X = new int[5];
-			// **********
-
-			// **********
-			//int[] X = new int[5];
+			//myArray = new int[5];
 			// **********
 
 			// **********
-			//int[] X;
-
-			//X = new int[5];
-
-			//X[0] = 10;
-			//X[1] = 20;
-			//X[2] = 30;
-			//X[3] = 40;
-			//X[4] = 50;
+			//int[] myArray = new int[5];
 			// **********
 
 			// **********
-			//int[] X = { 10, 20, 30, 40, 50 };
+			//int[] myArray;
+
+			//myArray = new int[5];
+
+			//myArray[0] = 10;
+			//myArray[1] = 20;
+			//myArray[2] = 30;
+			//myArray[3] = 40;
+			//myArray[4] = 50;
+			// **********
+
+			// **********
+			//int[] myArray = { 10, 20, 30, 40, 50 };
 			// **********
 
 			// **********
 			// **********
 			// **********
-			//System.Console.Write("How many numbers do you have: ");
+			System.Console.Write("How many numbers do you have: ");
 
-			//string strNumberCount =
-			//	System.Console.ReadLine();
+			string numberCountString =
+				System.Console.ReadLine();
 
-			//int intNumberCount =
-			//	System.Convert.ToInt32(strNumberCount);
+			int numberCount =
+				System.Convert.ToInt32(numberCountString);
 
-			//int[] intNumbers = new int[intNumberCount];
+			int[] numbers = new int[numberCount];
 
-			//for (int intIndex = 1; intIndex <= intNumberCount; intIndex++)
+			for (int index = 1; index <= numberCount; index++)
+			{
+				string message = $"[{ index }]: ";
+
+				System.Console.Write(message);
+
+				string numberString =
+					System.Console.ReadLine();
+
+				int number =
+					System.Convert.ToInt32(numberString);
+
+				numbers[index - 1] = number;
+				//numbers[index] = number; // Note: Wrong Usage!
+			}
+
+			int sum = 0;
+
+			for (int index = 0; index <= numberCount - 1; index++)
+			{
+				sum += numbers[index];
+			}
+
+			string result =
+				$"The sum of these numbers is { sum }.";
+
+			System.Console.WriteLine(result);
+			// **********
+
+			// **********
+			for (int index = 0; index <= numbers.Length - 1; index++)
+			{
+				System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
+			}
+			// **********
+
+			// **********
+			//for (int index = 0; index <= numbers.Length - 1; index += 2)
 			//{
-			//	//string strMessage =
-			//	//	"[" + intIndex + "] -> ";
-
-			//	string strMessage =
-			//		string.Format("[{0}] -> ", intIndex);
-
-			//	System.Console.Write(strMessage);
-
-			//	string strNumber =
-			//		System.Console.ReadLine();
-
-			//	int intNumber =
-			//		System.Convert.ToInt32(strNumber);
-
-			//	intNumbers[intIndex - 1] = intNumber;
+			//	System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
 			//}
+			// **********
 
-			//int intSum = 0;
-
-			//for (int intIndex = 0; intIndex <= intNumberCount - 1; intIndex++)
+			// **********
+			//for (int index = numbers.Length - 1; index >= 0; index--)
 			//{
-			//	intSum +=
-			//		intNumbers[intIndex];
+			//	System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
 			//}
+			// **********
 
-			////string strResult =
-			////	"The sum of these numbers is: " + intSum;
-
-			////string strResult =
-			////	string.Format("The sum of these numbers is: {0}", intSum);
-
-			////System.Console.WriteLine(strResult);
-
-			//System.Console.WriteLine("The sum of these numbers is: {0}", intSum);
-			//// **********
-
-			//// **********
-			//for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex++)
+			// **********
+			//for (int index = numbers.Length - 1; index >= 0; index--)
 			//{
-			//	//System.Console.WriteLine("[" + (intIndex + 1) + "]: " + intNumbers[intIndex]);
+			//	numbers[index] += 10;
 
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
+			//	System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
 			//}
+			// **********
 
-			//for (int intIndex = 0; intIndex <= intNumbers.Length - 1; intIndex += 2)
+			// **********
+			//foreach (int currentNumber in numbers)
 			//{
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			//}
+			//	// Note: [currentNumber] is readonly!
+			//	//currentNumber += 10;
 
-			//for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
-			//{
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			//}
-
-			//for (int intIndex = intNumbers.Length - 1; intIndex >= 0; intIndex--)
-			//{
-			//	intNumbers[intIndex] += 5;
-
-			//	System.Console.WriteLine("[{0}]: {1}", intIndex + 1, intNumbers[intIndex]);
-			//}
-
-			//foreach (int intCurrentNumber in intNumbers)
-			//{
-			//	// Note: intCurrentNumber is readonly!
-			//	//intCurrentNumber += 5;
-
-			//	System.Console.WriteLine(">" + intCurrentNumber);
+			//	System.Console.WriteLine(">" + currentNumber);
 			//}
 			// **********
 			// **********
 			// **********
 
 			// **********
-			int[] X = new int[3];
-			int[,] Y = new int[3, 50];
-			int[,,] Z = new int[3, 50, 4];
+			int[] myArray1 = new int[3];
+			int[,] myArray2 = new int[3, 50];
+			int[,,] myArray3 = new int[3, 50, 4];
 
 			// Jagged Array
-			int[][] T = new int[3][];
-			T[0] = new int[50];
-			T[1] = new int[2];
-			T[2] = new int[3];
+			int[][] myArray4 = new int[3][];
+
+			myArray4[0] = new int[50];
+			myArray4[1] = new int[2];
+			myArray4[2] = new int[3];
 			// **********
 
 			// **********
