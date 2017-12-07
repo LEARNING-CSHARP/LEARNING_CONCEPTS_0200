@@ -9,8 +9,9 @@
 			// هستند Reference Type تمام آرایه‌ها در سی‌شارپ
 			// هستند Zero Based ها در سی‌شارپ Collection تمامی آرایه‌ها یا
 			// آرایه پس از ساخته شدن قابلیت تغییر سایز را ندارد
+			// می‌شوند، مطلقا مقدار اولیه ندارند ولی Allocate قرار گرفته و یا اصطلاحا Stack تمام متغیرهایی که در داخل
 			// می‌شوند، اتفاقا مقدار اولیه مشخص دارند Allocate قرار گرفته و یا اصطلاحا Heap تمام متغیرهایی که در داخل
-			// هر چند نمی‌توان پس از خلق آرایه طول آنرا تغییر داد ولی می‌توان در زمان خلق آرایه، طول آنرا به صورت پارامتریک مشخص نمود
+			// هر چند نمی‌توان پس از خلق آرایه طول آنرا تغییر داد، ولی می‌توان در زمان خلق آن، طول آنرا به صورت پارامتریک مشخص نمود
 
 			// **********
 			//int[] myArray;
@@ -53,7 +54,8 @@
 
 			for (int index = 1; index <= numberCount; index++)
 			{
-				string message = $"[{ index }]: ";
+				// [1] ->
+				string message = $"[{ index }] -> ";
 
 				System.Console.Write(message);
 
@@ -64,7 +66,7 @@
 					System.Convert.ToInt32(numberString);
 
 				numbers[index - 1] = number;
-				//numbers[index] = number; // Note: Wrong Usage!
+				//numbers[index] = number; // Note: Wrong Usage! Runtime Error!
 			}
 
 			int sum = 0;
@@ -113,7 +115,7 @@
 			// **********
 			//foreach (int currentNumber in numbers)
 			//{
-			//	// Note: [currentNumber] is readonly!
+			//	// Note: Wrong Usage! currentNumber is readonly!
 			//	//currentNumber += 10;
 
 			//	System.Console.WriteLine(">" + currentNumber);
@@ -136,36 +138,36 @@
 			// **********
 
 			// **********
-			System.Collections.ArrayList oList = new System.Collections.ArrayList();
+			System.Collections.ArrayList list = new System.Collections.ArrayList();
 
-			//oList.Add(1);
-			//oList.Add(2);
-			//oList.Add(222);
-			//oList.Add(3);
-			//oList.Add(4);
-			//oList.Add(5);
-			//oList.Add(222);
-			//oList.Add(6);
-			//oList.Add(7);
-			//oList.Add(222);
-			//oList.Add(8);
-			//oList.Add(9);
+			//list.Add(1);
+			//list.Add(2);
+			//list.Add(222);
+			//list.Add(3);
+			//list.Add(4);
+			//list.Add(5);
+			//list.Add(222);
+			//list.Add(6);
+			//list.Add(7);
+			//list.Add(222);
+			//list.Add(8);
+			//list.Add(9);
 
-			//oList.Add(0);
-			//oList.Insert(0, 123);
-			//oList.Insert(2, 234);
+			//list.Add(0);
+			//list.Insert(0, 123);
+			//list.Insert(2, 234);
 
-			//for (int intIndex = 0; intIndex <= oList.Count - 1; intIndex++)
+			//for (int index = 0; index <= list.Count - 1; index++)
 			//{
-			//	System.Console.WriteLine("> " + oList[intIndex]);
+			//	System.Console.WriteLine("> " + list[index]);
 			//}
 
-			//foreach (int intCurrent in oList)
+			//foreach (int current in list)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 
-			//if (oList.Contains(3))
+			//if (list.Contains(3))
 			//{
 			//	System.Console.WriteLine("has 3!");
 			//}
@@ -174,79 +176,79 @@
 			//	System.Console.WriteLine("does not have 3!");
 			//}
 
-			//oList.Reverse();
+			//list.Reverse();
 
-			//foreach (int intCurrent in oList)
+			//foreach (int current in list)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 
-			//oList.Remove(15);
-			//oList.Remove(222);
+			//list.Remove(15);
+			//list.Remove(222);
 
-			//foreach (int intCurrent in oList)
+			//foreach (int current in list)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 
-			//while(oList.Contains(222))
+			//while(list.Contains(222))
 			//{
-			//	oList.Remove(222);
+			//	list.Remove(222);
 			//}
 
 			// سیستم را نابود می‌کند
-			//foreach(int intNumber in oList)
+			//foreach(int intNumber in list)
 			//{
 			//	if(intNumber == 222)
 			//	{
-			//		oList.Remove(intNumber);
+			//		list.Remove(intNumber);
 			//	}
 			//}
 
 			// سیستم را نابود می‌کند
-			//for (int intIndex = 0; intIndex < oList.Count; intIndex++)
+			//for (int index = 0; index < list.Count; index++)
 			//{
-			//	if ((int)oList[intIndex] == 222)
+			//	if ((int)list[index] == 222)
 			//	{
-			//		oList.Remove(222);
+			//		list.Remove(222);
 			//	}
 			//}
 
-			//foreach (int intCurrent in oList)
+			//foreach (int current in list)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 
-			//System.Console.WriteLine("Count: " + oList.Count);
+			//System.Console.WriteLine("Count: " + list.Count);
 
-			//oList.RemoveAt(3);
+			//list.RemoveAt(3);
 
-			//System.Console.WriteLine("Count: " + oList.Count);
+			//System.Console.WriteLine("Count: " + list.Count);
 
-			//foreach (int intCurrent in oList)
+			//foreach (int current in list)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 
-			//oList.Clear();
+			//list.Clear();
 
-			//foreach (int intCurrent in oList)
+			//foreach (int current in list)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 
-			//int intIndex = oList.IndexOf(500);
-			//int intIndex = oList.IndexOf(222);
+			//int index = list.IndexOf(500);
+			//int index = list.IndexOf(222);
 
-			//System.Console.WriteLine("> " + intIndex);
+			//System.Console.WriteLine("> " + index);
 
-			//intIndex = oList.IndexOf(222);
+			//index = list.IndexOf(222);
 
-			//System.Console.WriteLine("> " + intIndex);
+			//System.Console.WriteLine("> " + index);
 
-			//intIndex = oList.LastIndexOf(222);
+			//index = list.LastIndexOf(222);
 
-			//System.Console.WriteLine("> " + intIndex);
+			//System.Console.WriteLine("> " + index);
 			// **********
 
 			// **********
@@ -258,9 +260,9 @@
 			//oMyList1.Add(3);
 			//oMyList1.Add(4);
 
-			//foreach (int intCurrent in oMyList1)
+			//foreach (int current in oMyList1)
 			//{
-			//	System.Console.WriteLine("> " + intCurrent);
+			//	System.Console.WriteLine("> " + current);
 			//}
 			// **********
 
@@ -273,9 +275,9 @@
 			oMyList2.Add(3);
 			oMyList2.Add(4);
 
-			foreach (int intCurrent in oMyList2)
+			foreach (int current in oMyList2)
 			{
-				System.Console.WriteLine("> " + intCurrent);
+				System.Console.WriteLine("> " + current);
 			}
 			// **********
 
