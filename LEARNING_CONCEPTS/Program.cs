@@ -16,6 +16,12 @@
 			// **********
 			//int[] myArray;
 
+			//myArray[2] = 7; // Compile Error!
+			// **********
+
+			// **********
+			//int[] myArray;
+
 			//myArray = new int[5];
 			// **********
 
@@ -83,10 +89,10 @@
 			// **********
 
 			// **********
-			for (int index = 0; index <= numbers.Length - 1; index++)
-			{
-				System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
-			}
+			//for (int index = 0; index <= numbers.Length - 1; index++)
+			//{
+			//	System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
+			//}
 			// **********
 
 			// **********
@@ -104,7 +110,7 @@
 			// **********
 
 			// **********
-			//for (int index = numbers.Length - 1; index >= 0; index--)
+			//for (int index = 0; index <= numbers.Length - 1; index++)
 			//{
 			//	numbers[index] += 10;
 
@@ -267,18 +273,18 @@
 			// **********
 
 			// **********
-			System.Collections.Generic.List<int> oMyList2 = new System.Collections.Generic.List<int>();
+			//System.Collections.Generic.List<int> oMyList2 = new System.Collections.Generic.List<int>();
 
-			oMyList2.Add(1);
-			oMyList2.Add(2);
-			//oMyList2.Add("Hello, World!"); // سوتی دادم
-			oMyList2.Add(3);
-			oMyList2.Add(4);
+			//oMyList2.Add(1);
+			//oMyList2.Add(2);
+			////oMyList2.Add("Hello, World!"); // سوتی دادم
+			//oMyList2.Add(3);
+			//oMyList2.Add(4);
 
-			foreach (int current in oMyList2)
-			{
-				System.Console.WriteLine("> " + current);
-			}
+			//foreach (int current in oMyList2)
+			//{
+			//	System.Console.WriteLine("> " + current);
+			//}
 			// **********
 
 			System.Console.Write("Press [ENTER] To Exit...");
