@@ -220,6 +220,18 @@
 			//	}
 			//}
 
+			// هرگاه بخواهیم از یک لیست، عنصر یا عنصرهایی را حذف نماییم
+			// و این احتمال وجود داشته باشد که عنصر مورد نظر بیش از یک عدد
+			// باشد، نکته بسیار مهم در تمام زبان‌های برنامه‌نویسی آن است که
+			// از انتهای لیست به ابتدا حرکت کنیم
+			//for (int index = list.Count - 1; index >= 0; index--)
+			//{
+			//	if ((int)list[index] == 222)
+			//	{
+			//		list.Remove(222);
+			//	}
+			//}
+
 			//foreach (int current in list)
 			//{
 			//	System.Console.WriteLine("> " + current);
@@ -277,7 +289,7 @@
 
 			//oMyList2.Add(1);
 			//oMyList2.Add(2);
-			////oMyList2.Add("Hello, World!"); // سوتی دادم
+			//oMyList2.Add("Hello, World!"); // سوتی دادم
 			//oMyList2.Add(3);
 			//oMyList2.Add(4);
 
