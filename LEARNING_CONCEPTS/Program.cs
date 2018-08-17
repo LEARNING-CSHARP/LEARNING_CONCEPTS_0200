@@ -23,6 +23,8 @@
 			//int[] myArray;
 
 			//myArray = new int[5];
+
+			//myArray[2] = 7; // OK
 			// **********
 
 			// **********
@@ -53,39 +55,39 @@
 			string numberCountString =
 				System.Console.ReadLine();
 
-			int numberCount =
+			int numberCountInt =
 				System.Convert.ToInt32(numberCountString);
 
-			int[] numbers = new int[numberCount];
+			int[] numbers = new int[numberCountInt];
 
-			for (int index = 1; index <= numberCount; index++)
+			for (int indexInt = 1; indexInt <= numberCountInt; indexInt++)
 			{
 				// [1] ->
-				string message = $"[{ index }] -> ";
+				string messageString = $"[{ indexInt }] -> ";
 
-				System.Console.Write(message);
+				System.Console.Write(messageString);
 
 				string numberString =
 					System.Console.ReadLine();
 
-				int number =
+				int numberInt =
 					System.Convert.ToInt32(numberString);
 
-				numbers[index - 1] = number;
+				numbers[indexInt - 1] = numberInt;
 				//numbers[index] = number; // Note: Wrong Usage! Runtime Error!
 			}
 
-			int sum = 0;
+			int sumInt = 0;
 
-			for (int index = 0; index <= numberCount - 1; index++)
+			for (int indexInt = 0; indexInt <= numberCountInt - 1; indexInt++)
 			{
-				sum += numbers[index];
+				sumInt += numbers[indexInt];
 			}
 
-			string result =
-				$"The sum of these numbers is { sum }.";
+			string resultString =
+				$"The sum of these numbers is { sumInt }.";
 
-			System.Console.WriteLine(result);
+			System.Console.WriteLine(resultString);
 			// **********
 
 			// **********
