@@ -16,7 +16,7 @@
 			// **********
 			//int[] myArray;
 
-			//myArray[2] = 7; // Compile Error!
+			//myArray[2] = 7; // Compile (Syntax) Error!
 			// **********
 
 			// **********
@@ -25,6 +25,7 @@
 			//myArray = new int[5];
 
 			//myArray[2] = 7; // OK
+			//myArray[5] = 9; // Runtime Error!
 			// **********
 
 			// **********
