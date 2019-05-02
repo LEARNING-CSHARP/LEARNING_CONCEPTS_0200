@@ -56,39 +56,39 @@
 			string numberCountString =
 				System.Console.ReadLine();
 
-			int numberCountInt =
+			int numberCount =
 				System.Convert.ToInt32(numberCountString);
 
-			int[] numbers = new int[numberCountInt];
+			int[] numbers = new int[numberCount];
 
-			for (int indexInt = 1; indexInt <= numberCountInt; indexInt++)
+			for (int index = 1; index <= numberCount; index++)
 			{
 				// [1] ->
-				string messageString = $"[{ indexInt }] -> ";
+				string message = $"[{ index }] -> ";
 
-				System.Console.Write(messageString);
+				System.Console.Write(message);
 
 				string numberString =
 					System.Console.ReadLine();
 
-				int numberInt =
+				int number =
 					System.Convert.ToInt32(numberString);
 
-				numbers[indexInt - 1] = numberInt;
+				numbers[index - 1] = number;
 				//numbers[index] = number; // Note: Wrong Usage! Runtime Error!
 			}
 
-			int sumInt = 0;
+			int sum = 0;
 
-			for (int indexInt = 0; indexInt <= numberCountInt - 1; indexInt++)
+			for (int index = 0; index <= numberCount - 1; index++)
 			{
-				sumInt += numbers[indexInt];
+				sum += numbers[index];
 			}
 
-			string resultString =
-				$"The sum of these numbers is { sumInt }.";
+			string result =
+				$"The sum of these numbers is { sum }.";
 
-			System.Console.WriteLine(resultString);
+			System.Console.WriteLine(result);
 			// **********
 
 			// **********
