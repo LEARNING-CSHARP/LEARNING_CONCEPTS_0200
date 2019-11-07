@@ -85,6 +85,11 @@
 				sum += numbers[index];
 			}
 
+			//for (int index = 1; index <= numberCount; index++)
+			//{
+			//	sum += numbers[index - 1];
+			//}
+
 			string result =
 				$"The sum of these numbers is { sum }.";
 
