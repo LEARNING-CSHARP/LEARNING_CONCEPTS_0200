@@ -104,6 +104,13 @@
 			// **********
 
 			// **********
+			//for (int index = 2; index <= numbers.Length - 1; index++)
+			//{
+			//	System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
+			//}
+			// **********
+
+			// **********
 			//for (int index = 0; index <= numbers.Length - 1; index += 2)
 			//{
 			//	System.Console.WriteLine($"[{ index + 1 }]: { numbers[index] }");
