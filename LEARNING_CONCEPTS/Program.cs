@@ -1,16 +1,16 @@
 ﻿namespace LEARNING_CSHARP
 {
-	class Program
+	internal static class Program
 	{
-		static void Main(string[] args)
+		private static void Main()
 		{
 			// شده‌ای اشاره کنند new شوند و یا باید به یک شیء یا مجموعه از قبل new قبل از آنکه بتوان با آنها کار کرد، یا باید Reference Type تمام متغیرهای
 			// string به استثناء
 			// هستند Reference Type تمام آرایه‌ها در سی‌شارپ
 			// هستند Zero Based ها در سی‌شارپ Collection تمامی آرایه‌ها یا
 			// آرایه پس از ساخته شدن قابلیت تغییر سایز را ندارد
-			// می‌شوند، مطلقا مقدار اولیه ندارند ولی Allocate قرار گرفته و یا اصطلاحا Stack تمام متغیرهایی که در داخل
-			// می‌شوند، اتفاقا مقدار اولیه مشخص دارند Allocate قرار گرفته و یا اصطلاحا Heap تمام متغیرهایی که در داخل
+			// می‌شوند، مطلقاً مقدار اولیه ندارند ولی Allocate قرار گرفته و یا اصطلاحاً Stack تمام متغیرهایی که در داخل
+			// می‌شوند، اتفاقاً مقدار اولیه مشخص دارند Allocate قرار گرفته و یا اصطلاحاً Heap تمام متغیرهایی که در داخل
 			// هر چند نمی‌توان پس از خلق آرایه طول آنرا تغییر داد، ولی می‌توان در زمان خلق آن، طول آنرا به صورت پارامتریک مشخص نمود
 
 			// **********
@@ -136,7 +136,7 @@
 			// **********
 			//foreach (int currentNumber in numbers)
 			//{
-			//	// Note: Wrong Usage! currentNumber is readonly!
+			//	// Note: Wrong Usage! currentNumber is read-only!
 			//	//currentNumber += 10;
 
 			//	System.Console.WriteLine(">" + currentNumber);
